@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Generators</title>
+</head>
+<body>
+   <script>
+
+//generators é uma maneira de dividir e iterar sobre as funções
+//generators faz a função retornar um objeto iterator da mesma
+//o objeto possue dois atributos value e done, value é o valor do pedaço da função e done e um boolean que indica se o generator ja atingiu o seu fim
+//para declarar que uma função é generator: "function*"
+//para dividir a função: "yield"
+//para executar a proxima parte chama-se o metodo: "next()"
+
+    function* textGenerator() {
+        yield "test 1"
+        yield "test 2"
+        yield "test 3"
+
+        return "test 4"
+    }
+
+    let meuGenerator = textGenerator()
+
+    console.log(meuGenerator.next())
+    console.log("------")
+    console.log(meuGenerator.next())
+    console.log(console.log("------"))
+    console.log(meuGenerator.next())
+
+   </script>
+</body>
+</html>

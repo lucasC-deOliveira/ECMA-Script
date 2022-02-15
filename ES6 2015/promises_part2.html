@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <script>
+            
+            let promisse  = new Promise((resolve, reject) => {
+                
+                //requisição http para recuperar relação de usuarios
+
+                setTimeout(()=>{
+                    //requisição realizada de algum modo
+                    let resposta_da_requisicao = {}
+
+                    //erro na requisição
+                    if(false){
+                        resposta_da_requisicao = {
+                            codigo: 1050,
+                            erro: "Falha de autorização"
+                        }
+                        reject(resposta_da_requisicao)
+                    }
+                    resposta_da_requisicao = {
+                        0: {id: 1, nome: "lucas"},
+                        1: {id: 2, nome: 'rogerinha'},
+                        2: {id: 3, nome: 'jose'},
+
+                    }
+                    resolve(resposta_da_requisicao)
+
+                },3000)
+
+            }).then(dados => {
+                console.log("Operação sequencial ", dados)
+                return "parametro '' para o then 2"
+            }).then( param => {
+                console.log("then 2", param)}
+            ).then( () => {
+                console.log("then 3")
+                return " do then 3 para o 4"
+            }).catch(erro => {
+                //tratando o reject
+                console.log("catch", erro)
+                return "Resolve isso pra mim then, ass catch"
+            }).then((param) => {
+                console.log("dentro do then 4: ",param);
+            })
+
+
+        </script>
+    </body>
+</html>

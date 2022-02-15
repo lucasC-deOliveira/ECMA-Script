@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+         let p = new Promise((resolve, reject) => {
+
+            if(false){
+                return reject()
+            }   
+
+            resolve()
+
+         })
+         .then((resultado) => {console.log(resultado)} )
+         .catch((rejeitado) => {console.log(rejeitado)} )
+         .finally(() => {
+            console.log("Sempre passar por aqui")
+         })
+         .then(() => {console.log("Apos o finally")})
+
+            
+        </script>
+    </body>
+</html>

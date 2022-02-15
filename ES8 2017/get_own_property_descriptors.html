@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <script>
+                let objeto= {
+                    nome: "Lucas Carvalho",
+                    profissional: {
+                    site: "www.Lucascdoliveira.net.com",
+                    profissao: "Desenvolvedor"
+                },
+                hobbies: [
+                 { id: 1, hobby: "jogar jogos em video"},
+                 {id:2, hobby:"Dormir"},
+                 {id:3, hobby:"Tocar Guitarra eletrica"},
+                ],
+                pais: "Brasil"
+                
+            }
+
+            
+            //writable
+            /*Object.defineProperty(objeto, 'nome', {
+                value: "Lucas Carvalho",
+                writable: false
+            })
+
+            console.log(Object.getOwnPropertyDescriptors(objeto))*/
+
+
+            
+            //enumerable
+            /*Object.defineProperty(objeto, 'nome', {
+               enumerable: false
+            })
+            
+            for(let propriedade in objeto) {
+                console.log(propriedade, objeto[propriedade])
+            }*/
+
+
+            //configurable
+
+            Object.defineProperty(objeto, 'hobbies' {
+                configurable: false,
+            })
+            
+
+        </script>
+    </body>
+</html>
